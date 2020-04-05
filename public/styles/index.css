@@ -1,0 +1,105 @@
+/* ===== Clearing unnecessary space ===== */
+html, body {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+/* ===== Background image ===== */
+body > img {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    width: 100%;
+    left: auto;
+}
+
+/* ===== enforcing one font for all elements ===== */
+* { font-family: 'Tajawal', sans-serif; }
+
+/* ===== Main content ===== */
+#container {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* ===== Our app descriptor ===== */
+#description { color: #234D9F; }
+#description ul { display: none; } /*dont show on smaller screens*/
+#heading { font-size: 2.5em; }
+
+/* ===== Forms ===== */
+form {
+    background:#234D9F;
+    width: 70%;
+    max-width: 350px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form > * { margin: 0.8em 0; }
+form label.error {/*errors created by JQuery validation*/
+    font-size: 0.8em;
+    margin: 0;
+    margin-top: -1em;
+    color: red;
+}
+
+/* ===== textfields ===== */
+input {
+    width: 65%;
+    border: none;
+    outline: none;
+    background: #234D9F;
+    border-bottom: 2px solid #3ACC6C;
+    color: white;
+}
+input:focus { border-color: white; }
+input::placeholder { color: #e8edf5; }
+
+/* ===== Submit buttons ===== */
+button {
+    width: 50%;
+    background: #69F0AE;
+    color: #234D9F;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+button:hover{ background: white; }
+
+/* ===== Switching between forms ===== */
+.accountPrompt { color: #e8edf5; }
+.accountPrompt a { color: #3ACC6C; }
+.accountPrompt a:hover{ color: white; }
+
+/* ===== On larger screens ===== */
+@media screen and (min-width: 992px) {
+    /*Switch to row*/
+    #container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #description ul {
+        font-size: 1.2em;
+        font-weight: bold;
+        display: initial;
+    }
+
+    body > img {
+        opacity: 0.4;
+        width: unset;
+        max-width: 100%;
+        max-height: 70%;
+        right: 0;
+        bottom: 0;
+    }
+}

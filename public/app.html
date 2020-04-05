@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css?family=Tajawal&display=swap" rel="stylesheet"> 
+  
+  <link rel="stylesheet" href="./styles/app.css">
+
+  <title>تطبيق مشاركة المهام</title>
+</head>
+
+<body>
+  <div id="todo-tasks">
+  </div>
+
+  <header>
+    <p id="username">اسم المستخدم</p>
+    <h1>مشاركة المهام</h1>
+    <button onclick="firebase.auth().signOut()" tabindex="1"><img src="./img/logout.png" alt="الخروج"></button>
+  </header>
+
+  <div id="create-task" >
+    <textarea name="text" placeholder="نص المهمة" maxlength="100" rows="auto"></textarea>
+    <button onclick="createTask()">إنشاء</button>
+  </div>
+  
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  
+  <!-- Firebase-->
+  <script defer src="/__/firebase/7.13.2/firebase-app.js"></script>
+  <!-- Firebase Auth -->
+  <script defer src="/__/firebase/7.13.2/firebase-auth.js"></script>
+  <!-- Firebase Firestore-->
+  <script defer src="/__/firebase/7.13.2/firebase-firestore.js"></script> 
+  <script defer src="/__/firebase/init.js"></script>
+
+  <script src="./js/app.js" type="text/javascript"></script>
+</body>
+</html>

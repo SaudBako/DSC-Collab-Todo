@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشاركة المهام</title>
+    <link rel="stylesheet" href="./styles/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Tajawal:400,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <!-- Describes the app -->
+        <div id="description">
+            <h1 id="heading">مشاركة المهام</h1>
+            <ul>
+                <li>سجل مهامك ضمن فريقك</li>
+                <li>احفظ المهام على السحابة</li>
+                <li>ارفع انتاجيتك بمعدل سحري</li>
+                <li>احفظ عملك بالبريد الإلكتروني وكلمة المرور</li>
+
+            </ul>
+        </div>
+
+        <!-- Login form -->
+        <form name="login">
+            <h2>مرحبا بك</h2>
+
+            <input name="email" type="email" placeholder="البريد الإلكتروني">
+            <input name="password" type="password" placeholder="كلمة المرور">
+            
+            <button>تسجيل الدخول</button>
+            <p class="accountPrompt">لا امتلك حساب <a href="#">سجل الآن</a></p>
+        </form>
+
+        <!-- Sign up form -->
+        <form name="signup" style="display: none;">
+            <h2>حساب جديد</h2>
+
+            <input name="name" type="text" placeholder="الاسم">
+            <input name="email" type="email" placeholder="البريد الإلكتروني">
+            <input name="password" type="password" placeholder="كلمة المرور">
+            
+
+            <button>سجل الآن</button>
+            <p class="accountPrompt">لدي حساب بالفعل <a href="#">سجل الدخول</a></p>
+        </form>
+    </div>
+    
+    <img src="img/undraw_to_do_list_a49b.png" alt="Collaborative">
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- JQuery validate -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.13.2/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.13.2/firebase-auth.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>

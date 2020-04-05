@@ -1,0 +1,102 @@
+body {
+  display: none;
+  margin: 0;
+  margin-top: 5em;
+  margin-bottom: 4em;
+}
+* {font-family: 'Tajawal', sans-serif; }
+
+button, textarea {
+  border: none;
+  background: transparent;
+}
+button {
+  opacity: 0.75;
+  cursor: pointer;
+  font-weight: bold;
+}
+button:hover, button:focus { opacity : 1; }
+textarea {
+  resize: none;
+  overflow: auto;
+}
+img { width: 100%; }
+
+/* ===== App header ===== */
+header {
+  background-color: #234D9F;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  color: white;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header button { width: 3em; }
+
+
+/* ===== Todo tasks editor ===== */
+#create-task {
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  display: flex;
+}
+#create-task * { font-size: 1.2em;}
+#create-task textarea {
+  border-bottom: 0.2em solid #69F0AE;
+  padding: 0 0.5em;
+  width: 80%;
+}
+#text-error {
+  color: red;
+  position: absolute;
+  top: -1em;
+}
+#create-task button {
+  width: 20%;
+  background: #69F0AE;
+}
+
+/* ===== Todo tasks area ===== */
+#todo-tasks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== a todo task ===== */
+.todo-task {
+  background-color: #234D9F;
+  display: flex;
+  margin: 1em 0;
+  color: white;
+  width: 80%;
+  max-width: 512px; /* Limit the width on larger screens*/
+}
+.todo-task .content {
+  padding: 0.4em;
+  width: 100%;
+}
+.todo-task .header > * { margin: 0; }
+.todo-task .header {
+  display: flex;
+  justify-content: space-between;
+}
+.todo-task img { width: 100%; }
+.todo-task button{
+  width: 3rem;
+  background: #69F0AE;
+}
+
+/* ===== Done tasks ===== */
+.todo-task.completed {
+  background: grey;
+  order: 1;
+}
+.todo-task.completed button { display: none; }
+.todo-task.completed .content { width: 100%; }
